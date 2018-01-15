@@ -1,0 +1,169 @@
+.animation-dom{
+    display: flex;
+    justify-content: space-around;
+}
+
+.animation-dom>.section{
+    height: 200px;
+    margin-top:50px;
+    width:200px;
+}
+
+@keyframes balljump{
+    0%{
+        transform: translateY(60px);
+    }
+    40%{
+        transform: translateY(0px);
+    }
+    80%{
+        transform: translateY(60px);
+    }
+    100%{
+        transform: translateY(60px);
+    }
+}
+
+.animation-dom-1 .bar{
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    float: left;
+    transform: translateY(60px);
+    background: rgb(0, 183, 255);
+    margin: 8px;
+}
+.animation-dom-1 .bar:nth-child(1){
+    background: rgb(0, 183, 255);
+    -webkit-animation:balljump .8s ease infinite;
+}
+.animation-dom-1 .bar:nth-child(2){
+    background: rgb(0, 200, 255);
+    -webkit-animation:balljump .8s 0.06s ease infinite;
+}
+.animation-dom-1 .bar:nth-child(3){
+    background: rgb(0, 222, 255);
+    -webkit-animation:balljump .8s 0.12s ease infinite;
+}
+.animation-dom-1 .bar:nth-child(4){
+    background: rgb(0, 233, 255);
+    -webkit-animation:balljump .8s 0.18s ease infinite;
+}
+
+@keyframes rotateball{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+.animation-dom-2 .ball{
+    width: 15px;
+    height: 15px;
+    background: rgb(255, 255, 255);
+    transform: translateX(70px) translateY(0px);
+    border-radius: 50%;
+}
+.animation-dom-2 .outer{
+    width: 140px;
+    position: relative;
+    height: 140px;
+    margin: 0 auto;
+    background: rgb(100, 200, 255);
+    border-radius: 50%;
+    -webkit-animation: rotateball 3s ease-in-out infinite;
+}
+
+.animation-dom-2 .inner{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top:15px;
+    left: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+@keyframes rotatebar{
+    0%{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    60%{
+        transform: rotateX(360deg) rotateY(180deg) rotateZ(180deg);
+    }
+    100%{
+        transform: rotateX(360deg) rotateY(180deg) rotateZ(180deg);
+    }
+}
+.animation-dom-3{
+    width: 105px;
+    position: relative;
+    left: 50px;
+    overflow: hidden;
+}
+.animation-dom-3 .bar{
+    width: 15px;
+    height: 100px;
+    background: rgb(120, 255, 255);
+    float: left;
+    margin: 0px;
+}
+.animation-dom-3 .bar:nth-child(1){
+    -webkit-animation: rotatebar 1.8s ease-in-out infinite;
+}
+.animation-dom-3 .bar:nth-child(2){
+    -webkit-animation: rotatebar 1.8s 0.1s ease-in-out infinite;
+}
+.animation-dom-3 .bar:nth-child(3){
+    -webkit-animation: rotatebar 1.8s 0.2s ease-in-out infinite;
+}
+.animation-dom-3 .bar:nth-child(4){
+    -webkit-animation: rotatebar 1.8s 0.3s ease-in-out infinite;
+}
+.animation-dom-3 .bar:nth-child(5){
+    -webkit-animation: rotatebar 1.8s 0.4s ease-in-out infinite;
+}
+.animation-dom-3 .bar:nth-child(6){
+    -webkit-animation: rotatebar 1.8s 0.5s ease-in-out infinite;
+}
+.animation-dom-3 .bar:nth-child(7){
+    -webkit-animation: rotatebar 1.8s 0.6s ease-in-out infinite;
+}
+
+@keyframes rotatebar2{
+    0%{
+        transform: rotateX(0deg) ;
+    }
+    100%{
+        transform: rotateX(360deg);
+    }
+}
+.animation-dom-4 .bar{
+    width: 15px;
+    height: 100px;
+    background: rgb(255, 200, 255);
+    float: left;
+    margin: 2px;
+}
+.animation-dom-4 .bar:nth-child(1){
+    -webkit-animation: rotatebar2 1.3s linear infinite;
+}
+.animation-dom-4 .bar:nth-child(2){
+    -webkit-animation: rotatebar2 1.3s 0.1s linear infinite;
+}
+.animation-dom-4 .bar:nth-child(3){
+    -webkit-animation: rotatebar2 1.3s 0.2s linear infinite;
+}
+.animation-dom-4 .bar:nth-child(4){
+    -webkit-animation: rotatebar2 1.3s 0.3s linear infinite;
+}
+.animation-dom-4 .bar:nth-child(5){
+    -webkit-animation: rotatebar2 1.3s 0.4s linear infinite;
+}
+.animation-dom-4 .bar:nth-child(6){
+    -webkit-animation: rotatebar2 1.3s 0.5s linear infinite;
+}
+.animation-dom-4 .bar:nth-child(7){
+    -webkit-animation: rotatebar2 1.3s 0.6s linear infinite;
+}

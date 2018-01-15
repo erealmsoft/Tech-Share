@@ -1,0 +1,136 @@
+.transition-dom .transition-dom-1{
+    width: 100px;
+    height: 100px;
+    background: rgb(117, 216, 255);
+    line-height: 100px;
+    color: #333;
+    font-size: 20px;
+    border-radius: 100%;
+    position: relative;
+    left: 0px;
+    transition: all ease 0.6s;
+}
+.transition-dom-1:hover{
+    left: 60px;
+    transform: rotateZ(120deg);
+}
+
+/* transition-2 */
+.transition-dom-2{
+    position: relative;    
+    width: 110px;
+    height:100px;
+}
+
+.transition-dom-2 .bar{
+    position: absolute;
+    width: 110px;
+    height: 20px;
+    opacity: 1;
+    border-radius: 10px;
+    background: rgb(117, 216, 255);
+    transition: all ease 0.4s;
+    left:0;
+}
+
+.transition-dom-2 .bar:nth-child(1){
+    top: 0px;
+}
+.transition-dom-2 .bar:nth-child(2){
+    top: 40px;
+}
+.transition-dom-2 .bar:nth-child(3){
+    top: 80px;
+}
+
+.transition-dom-2:hover .bar:nth-child(1){
+    opacity: 0;
+    transform: rotateZ(-50deg);
+    transform-origin: 100% 50%;
+    left: -20px;
+}
+
+.transition-dom-2:hover .bar:nth-child(2){
+    transform: rotateZ(45deg)
+}
+.transition-dom-2:hover .bar:nth-child(3){
+    transform: rotateZ(-45deg);
+    top: 79px;
+    left:13px;
+    transform-origin: 0% 50%;
+}
+
+.transition-dom-3{
+    position: relative;
+    width:110px;
+}
+
+.transition-dom-3 .front, .transition-dom-3 .back{
+    background: rgb(166, 230, 255);
+    color: #333;
+    font-size: 15px !important;
+    padding:10px;
+    width: 90px;
+    height:80px;
+    position: absolute;
+    transition: all ease 0.6s;
+    backface-visibility: hidden;
+}
+.transition-dom-3 .back{
+    background: rgb(0, 183, 255);
+    color: #fff;
+    transform: rotateY(180deg) rotateX(20deg);
+}
+.transition-dom-3:hover .front{
+    transform: rotateY(180deg) rotateX(20deg);
+}
+
+.transition-dom-3:hover .back{
+    transform: rotateY(0deg);
+}
+.transition-dom{
+    top:60px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.transition-dom-4{
+    top: 20px;
+    position: relative;
+    color: rgb(0, 183, 255);
+    height: 100px;
+    transform: scale(0.7);
+    cursor: pointer;
+    transition: all ease 0.6s;
+}
+
+.transition-dom-4:hover{
+    transform: scale(0.9);
+}
+
+.transition-dom-4:before, .transition-dom-4:after{
+    content: '[';
+    position: absolute;
+    font-weight: bold;
+    transition: all ease 0.6s;
+    top:0;
+    opacity: 0;
+}
+.transition-dom-4:before{
+    content: '[';
+    left:10px;
+}
+.transition-dom-4:after{
+    content: ']';
+    right:10px;
+}
+.transition-dom-4:hover:before{
+    left: -30px;
+    opacity: 1;
+}
+
+.transition-dom-4:hover:after{
+    right: -30px;
+    opacity: 1;
+}

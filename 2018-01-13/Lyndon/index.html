@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>reveal.js – The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/reveal.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/theme/sky.min.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/lib/css/zenburn.min.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'https://cdn.bootcss.com/reveal.js/3.6.0/css/print/pdf.min.css' : 'https://cdn.bootcss.com/reveal.js/3.6.0/css/print/paper.min.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/reveal.js/3.6.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/transition-dom.css">
+    <link rel="stylesheet" href="css/animation-dom.css">
+</head>
+
+<body>
+    <div class="header" style="background: rgba(255, 255, 255, 0.2)">
+        <a href="#/0" class="link" style="color: #333">Animation Share</a>
+    </div>
+    <div class="reveal">
+        <div class="slides">
+            <section data-transition="fade">
+                <h1>Animation</h1>
+            </section>
+
+            <section data-transition="fade">
+                <h1>CSS</h1>
+                <h4>transition</h4>
+                <h4>animation</h4>
+            </section>
+
+            <section>
+                <h2>TRANSITION</h2> 
+                <p class="main-text">1. 可以很方便的借助css的自带的dom交互可以实现纯css的动画交互效果</p>
+                <p class="main-text">2. 借助transform的3d和GPU进行动画重绘渲染, 性能和效果和都非常优秀</p>
+                <p class="main-text">3. 巧妙的利用各种css属性的配合可以实现比较有趣生动的交互</p>
+                <div class="transition-dom">
+                    <div class="transition-dom-1">
+                        HELLO
+                    </div>
+                    <div class="transition-dom-2">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="transition-dom-3">
+                        <div class="front">this is front</div>
+                        <div class="back">this is background</div>
+                    </div>
+                    <div class="transition-dom-4">
+                        My Text
+                    </div>
+                </div>
+            </section>
+
+            <section data-transition="">
+                <h2>ANIMATION</h2>
+                <h5 style="font-weight: 200">作为transition的升级版, 可以很方便的组合各种各样的transition形成复杂动画</h5>
+                <div class="animation-dom">
+                    <div class="section" >
+                        <div class="animation-dom-1">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="animation-dom-2">
+                            <div class="outer">
+                                <div class="inner"></div>
+                                <div class="ball"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="animation-dom-3">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="animation-dom-4">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="setInterval-dom">
+                    <div class="section" >
+                        <button id="animate-dom-1">slide</button>
+                        <div class="setInterval-dom-1" id="setInterval-dom-1">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <button id="animate-dom-2">bounce</button>
+                        <div class="setInterval-dom-2" id="setInterval-dom-2"></div>
+                    </div>
+                    <div class="section">
+                        <button id="animate-dom-3">button</button>
+                        <div class="setInterval-dom-3">
+                            <canvas id="panel" width="200" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section> 
+                <h4>transition和animation的缺点</h4>
+                <p class="main-text">1. 有的动画所操作的不是DOM, 比如说屏幕滚动</p>
+                <p class="main-text">2. DOM的动画曲线只限于三次贝塞尔曲线, 不能完成更复杂的动画以及自定义的动画函数，比如小球弹弹弹。</p>
+                <p class="main-text">3. DOM实现动画是比较奢侈的, 复杂的动画如果用dom实现会造成很大的性能问题, 比如粒子动画</p>
+                <p class="main-text">4. 追求更好的动画效果时, 在three.js中, 会需要有很多其他的变量, 比如加速度, 弹性, 灯光, 相机</p>
+            </section>
+
+            <section>
+                <h3>js实现简单动画主要通过</h3>
+                setInterval & setTimeout & requestAnimateFrame
+            </section>
+            <section>
+                <h2>动画基础</h2>
+                <div >
+                    <p class="main-text" style="text-align: center"><a href="https://baike.baidu.com/item/%E5%8A%A8%E7%94%BB/206564?fr=aladdin">动画的概念</a> </p> 
+                    <p class="main-text" style="text-align: center"><a href="https://baike.baidu.com/item/%E4%B8%80%E5%B8%A7/4310305?fr=aladdin">什么是动画帧</a></p>
+                    <p class="main-text" style="text-align: center"><a href="https://baike.baidu.com/item/FPS/3227416?fr=aladdin">FPS</a></p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>动画曲线</h2>
+                <p>ease easeIn easeOut linear</p>
+            </section>
+
+            <section>
+                css的动画曲线
+            </section>
+
+            <section>
+                tweenJs是一套用js实现的动画运动曲线算法, 根据时间帧和变化量进行计算当前值的动画算法, 实现了各种三次以上的高阶动画, 可以利用其很好的模拟css的效果
+            </section>
+            
+            <section>
+                利用tween实现一个模拟实现一个简单的animate方法
+            </section>
+
+            <section>
+                <h1>canvas</h1>
+                <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial">https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial</a>
+            </section>
+
+            <section>
+                <h3>绘制图形</h3>
+                <h3>图片操作</h3>
+                <h3>图像分析</h3>
+            </section>
+
+            <section>
+                <a href="./num-animate.html">canvas动画</a>
+            </section>
+            <section>
+                <h3>运用canvas和tween开发动画</h3>
+            </section>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.bootcss.com/reveal.js/3.5.0/lib/js/head.min.js"></script>
+<script src="https://cdn.bootcss.com/reveal.js/3.6.0/js/reveal.min.js"></script>
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({});
+</script>
+<script src="./js/tween.js"></script>
+<script src="./js/panel.js"></script>
+<script src="./js/animate.js"></script>
+<script src="./js/num.js"></script>
+</html>
