@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Share - React Start</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/reveal.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/black.min.css" />
+</head>
+
+<body>
+    <div class="reveal">
+
+        <div class="slides">
+            <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$"  data-element-attributes="{_\s*?([^}]+?)}">
+                    <script type="text/template">
+                        ## Why react?
+
+                        --
+
+                        * Erealmsoft 大前端
+                        * 简单易学，开发上手快
+                        * 组件化思想，易于开发 + 维护
+                        * 有一个强大成熟的社区
+                        * 数不胜数的第三方包以及应用
+
+                        ---
+
+                        ## Prequest
+
+                        --
+
+                        * ES6+
+                        * JSX
+
+                        ---
+
+                        ## How to start?
+
+                        --
+
+                        * create project: `yarn create react-app [app name]`
+                        * start project: `yarn start`
+
+                        ---
+
+                        ## Libs & tools:
+                            * mui: UI 框架
+                            * mobx: 状态管理
+                            * react-router: 路由控制
+                            * axios: xhr
+
+                        ---
+
+                        ## How to:
+
+                        --
+
+                        使用 css
+                            * 在jsx中写css
+                            * 在单独的css文件里面写css
+
+                        --
+
+                        update theme?
+                            * 更新mui主题颜色
+
+                        --
+
+                        setting dev server?
+                            * eject所有的react-script的默认配置并进行修改
+
+                        --
+
+                        intercept xhr?
+                            * 给axios请求上添加拦截器中间件
+                            * 实例一：给请求头上添加access token
+                            * 实例二：根据服务端返回的数据中的code显示消息框
+
+                        --
+
+                        怎么设置client id和client secret相关的信息？
+                            * 后端添加域名校验，不用在前端添加client相关的设置
+
+                        --
+
+                        deploy?
+                            * 直接在api server上起一个静态文件夹
+                            * 起一个静态文件服务器，host单独的纯前端项目
+
+                        --
+
+                        怎样针对不同的环境设置不同的env？
+                            * 通过.env 文件针对不同的环境进行不同的环境变量配置
+
+                    </script>
+            </section>
+        </div>
+
+    </div>
+˘
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/js/reveal.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/marked.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/markdown.js"></script>
+<script>
+    Reveal.initialize({
+        markdown: {
+            smartypants: true
+        }
+    });
+</script>
+
+</html>
